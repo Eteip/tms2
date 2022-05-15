@@ -1,18 +1,19 @@
 @font-face {
     font-family: averta_regular;
-    src: url(fonts/Averta-Regular.woff2) format("woff2")
+    /* src: url(../Averta-Regular.woff2) format("woff2"); */
 }
 
 @font-face {
     font-family: averta_semibold;
-    src: url(fonts/Averta-SemiBold.woff2) format("woff2")
+    src: url(/Averta-SemiBold.woff2) format("woff2");
+
 }
 
 body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: averta_regular, sans-serif;
+    font-family: sans-serif, Arial, Helvetica;
     background-color: rgb(246 246 246 / 59%);
 }
 

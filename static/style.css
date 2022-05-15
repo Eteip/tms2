@@ -1,12 +1,14 @@
 @font-face {
     font-family: averta_regular;
-    src: url(/Averta-Regular.woff2) format("woff2")
+    src: url(/Averta-Regular.woff2) format("woff2");
+    /* src: url(/static/fonts/AvertaDemo-Regular.otf); */
     /* src: url(/static/fonts/Averta-Regular.woff2) format("woff2") */
 }
 
 @font-face {
     font-family: averta_semibold;
-    src: url(/Averta-SemiBold.woff2) format("woff2")
+    src: url(/Averta-SemiBold.woff2) format("woff2");
+    /* src: url(/static/fonts/AvertaDemo-ExtraBoldItalic.otf); */
     /* src: url(/static/fonts/Averta-SemiBold.woff2) format("woff2") */
 }
 
