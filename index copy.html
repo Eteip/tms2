@@ -240,6 +240,34 @@
     div[for="seat"][is=""] div[for="body"] svg path {
         fill: #fff !important;
     }
+
+    /* COUNTDOWN */
+
+        #countdown {
+    width: 100%;
+    }
+    label {
+    clear: both;
+    display: block;
+    }
+    #countdown span {
+    background: rgba(0,0,0,0);
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    width: 25%;
+    dispaly: block;
+    float: left;
+    border-right: 1px solid #FFF;
+    }
+    #countdown span:last-child {
+    /* border-right: 1px solid #313233; */
+    }
+
+    .dotted{border-style: solid;}
+
+    /* END COUNTDOWN */
 </style>
 
 <body>
@@ -305,6 +333,9 @@
                     </div>
                 </div>
                 <div for="timer">
+                    <!-- COUNT DOWN -->
+                    <div id="countdown"></div>
+                    <!-- END COUNT DOWN -->
                     <div id='sub_t' style="visibility: hidden;">SECTION 202</div>
                     <div for="pay">
                         <img src="https://developer.apple.com/wallet/add-to-apple-wallet-guidelines/images/button-one-line-large_2x.png" style="
@@ -517,6 +548,44 @@
                     });
             });
         }
+
+        
+        // COUNT DOWN SCRIPT
+
+        // set the date we're counting down to
+var target_date = new Date('September, 2, 2022').getTime();
+ 
+ // variables for time units
+ var DAY, HOUR, MIN, SEC;
+  
+ // get tag element
+ var countdown = document.getElementById('countdown');
+  
+ // update the tag with id "countdown" every 1 second
+ setInterval(function () {
+  
+     // find the amount of "seconds" between now and target
+     var current_date = new Date().getTime();
+     var seconds_left = (target_date - current_date) / 1000;
+  
+     // do some time calculations
+     days = parseInt(seconds_left / 86400);
+     seconds_left = seconds_left % 86400;
+      
+     hours = parseInt(seconds_left / 3600);
+     seconds_left = seconds_left % 3600;
+      
+     minutes = parseInt(seconds_left / 60);
+     seconds = parseInt(seconds_left % 60);
+      
+     // format countdown string + set tag value
+     countdown.innerHTML = '<span class="days" >' + days +  ' <label class="dotted">DAY</label></span> <span class="HOUR">' + hours + ' <label class="dotted">HOUR</label></span> <span class="minutes">'
+     + minutes + ' <label class="dotted">MIN</label></span> <span class="seconds">' + seconds + ' <label class="dotted">SEC</label></span>';  
+  
+ }, 1000);
+
+        // END COUNTDOWN
+
     </script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
 </body>
